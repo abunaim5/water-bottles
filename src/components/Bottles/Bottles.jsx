@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Bottle from "../Bottle/Bottle";
 import './Bottles.css'
+import { getDataLS, saveDataLS } from "../utilities/utilities";
 
 const Bottles = () => {
 
@@ -18,7 +19,13 @@ const Bottles = () => {
         console.log(bottle);
         const newPurchase = [...purchase, bottle];
         setPurchase(newPurchase);
+        saveDataLS(bottle.id);
     }
+
+    useEffect(() => {
+        const cart = getDataLS();
+        setPurchase(cart);
+    }, [])
 
     return (
         <div>

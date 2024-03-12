@@ -1,4 +1,4 @@
-.bottle-container{
+.bottle-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,6 +8,6 @@
     background-color: #EBEEF0;
 }
 
-.bottle-container img{
+.bottle-container img {
     width: 300px;
 }
